@@ -341,7 +341,7 @@ module EventCalendar
         # if we reached the end of the week, calculate this row's height
         if index % 7 == 0
           total_event_height = options[:event_height] + options[:event_margin]
-          calc_row_height = (num_event_rows * total_event_height) + options[:day_nums_height] + options[:event_margin]
+          calc_row_height = ((num_event_rows+4) * total_event_height) + options[:day_nums_height] + options[:event_margin]
           row_height = [min_height, calc_row_height].max
           row_heights << row_height
           num_event_rows = 0
